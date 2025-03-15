@@ -7,7 +7,14 @@
         <title>Blueprint_communication - 编程从入门到入土</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="http://localhost:1313/blueprint_communication/">
   <meta property="og:site_name" content="编程从入门到入土">
   <meta property="og:title" content="Blueprint_communication">
-  <meta property="og:description" content="Hugo theme - LoveIt">
+  <meta property="og:description" content="Blueprint_communication 直接蓝图通信 在蓝图内创建另一个Actor和蓝图的引用，直接在蓝图内通过引用操作该Actor和蓝图。
+在关卡蓝图内放置Actor后选中该Actor，设置引用变量的对象。
+何时使用 关卡中存在两个 Actors，需要进行相互之间的通信 事件分发器（告知其他正在监听的蓝图已发生事件） 事件分发器创建
+可以在细节面板设置事件分发器输入
+事件分发器调用：右键输入Call 事件分发器名 或直接在我的蓝图面板拖出事件分发器，现在调用
+事件分发器使用：确保事件分发器所在的蓝图类在关卡中处于选中状态，打开管卡蓝图右键输入add 事件分发器名即可
+绑定事件：将一个事件绑定到另一个事件分发器或事件上。通过事件分发器所在蓝图实例绑定
+何时使用 需要从角色蓝图到关卡蓝图进行通信。 玩家角色升级，需要开放之前锁定的区域。 玩家角色按下行动按钮，对关卡执行某种操作。 生成的 Actor 执行某种操作时触发事件。 生成一个 Boss，Boss 被消灭时触发事件，在世界场景中生成一个奖励。 在关卡中生成一个道具（武器、回复剂等）并在道具被拾起时告知道具和角色。 蓝图接口">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -18,7 +25,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/logo.png">
   <meta name="twitter:title" content="Blueprint_communication">
-  <meta name="twitter:description" content="Hugo theme - LoveIt">
+  <meta name="twitter:description" content="Blueprint_communication 直接蓝图通信 在蓝图内创建另一个Actor和蓝图的引用，直接在蓝图内通过引用操作该Actor和蓝图。
+在关卡蓝图内放置Actor后选中该Actor，设置引用变量的对象。
+何时使用 关卡中存在两个 Actors，需要进行相互之间的通信 事件分发器（告知其他正在监听的蓝图已发生事件） 事件分发器创建
+可以在细节面板设置事件分发器输入
+事件分发器调用：右键输入Call 事件分发器名 或直接在我的蓝图面板拖出事件分发器，现在调用
+事件分发器使用：确保事件分发器所在的蓝图类在关卡中处于选中状态，打开管卡蓝图右键输入add 事件分发器名即可
+绑定事件：将一个事件绑定到另一个事件分发器或事件上。通过事件分发器所在蓝图实例绑定
+何时使用 需要从角色蓝图到关卡蓝图进行通信。 玩家角色升级，需要开放之前锁定的区域。 玩家角色按下行动按钮，对关卡执行某种操作。 生成的 Actor 执行某种操作时触发事件。 生成一个 Boss，Boss 被消灭时触发事件，在世界场景中生成一个奖励。 在关卡中生成一个道具（武器、回复剂等）并在道具被拾起时告知道具和角色。 蓝图接口">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -33,7 +47,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/blueprint_communication\/"
-        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  0 ,
+        },"image": ["http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  28 ,
         "url": "http:\/\/localhost:1313\/blueprint_communication\/","datePublished": "2025-03-15T17:15:14+08:00","dateModified": "2025-03-15T17:16:16+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
@@ -113,15 +127,66 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Blueprint_communication</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-15">2025-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;0 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;0 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-15">2025-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;28 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#直接蓝图通信">直接蓝图通信</a>
+      <ul>
+        <li><a href="#何时使用">何时使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#事件分发器告知其他正在监听的蓝图已发生事件">事件分发器（告知其他正在监听的蓝图已发生事件）</a>
+      <ul>
+        <li><a href="#何时使用-1">何时使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#蓝图接口">蓝图接口</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="blueprint_communication">Blueprint_communication</h1>
+<h2 id="直接蓝图通信">直接蓝图通信</h2>
+<p><img src="images/image.png" width="500"><br>
+在蓝图内创建另一个Actor和蓝图的引用，直接在蓝图内通过引用操作该Actor和蓝图。<br></p>
+<p><img src="images/image-1.png" width="500"><br>
+在关卡蓝图内放置Actor后选中该Actor，设置引用变量的对象。<br></p>
+<h3 id="何时使用">何时使用</h3>
+<ul>
+<li>关卡中存在两个 Actors，需要进行相互之间的通信</li>
+</ul>
+<h2 id="事件分发器告知其他正在监听的蓝图已发生事件">事件分发器（告知其他正在监听的蓝图已发生事件）</h2>
+<p><img src="images/image-2.png" width="500"><br>
+事件分发器创建<br></p>
+<p><img src="images/image-3.png" width="500"><br>
+可以在细节面板设置事件分发器输入<br></p>
+<p><img src="images/image-4.png" width="500"><br>
+事件分发器调用：右键输入Call 事件分发器名 或直接在我的蓝图面板拖出事件分发器，现在调用<br></p>
+<p><img src="images/image-5.png" width="500"><br>
+事件分发器使用：确保事件分发器所在的蓝图类在关卡中处于选中状态，打开管卡蓝图右键输入add 事件分发器名即可<br></p>
+<p><img src="images/image-6.png" width="500"><br>
+绑定事件：将一个事件绑定到另一个事件分发器或事件上。通过事件分发器所在蓝图实例绑定</p>
+<h3 id="何时使用-1">何时使用</h3>
+<ul>
+<li>需要从角色蓝图到关卡蓝图进行通信。
+<ul>
+<li>玩家角色升级，需要开放之前锁定的区域。</li>
+<li>玩家角色按下行动按钮，对关卡执行某种操作。</li>
+</ul>
+</li>
+<li>生成的 Actor 执行某种操作时触发事件。
+<ul>
+<li>生成一个 Boss，Boss 被消灭时触发事件，在世界场景中生成一个奖励。</li>
+<li>在关卡中生成一个道具（武器、回复剂等）并在道具被拾起时告知道具和角色。</li>
+</ul>
+</li>
+</ul>
+<h2 id="蓝图接口">蓝图接口</h2>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
